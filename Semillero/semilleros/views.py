@@ -26,7 +26,7 @@ def Solucitud_semillero(request):
 @login_required(login_url="login-usuarios")
 def list_semillero_activos(request):
     template = 'list-semillero.html'
-    semilleros = Semilleros.objects.filter(is_active=True)
+    semilleros = Semilleros.objects.filter(is_active=True, is_staff=False)
 
     return render(request, template, {
          'title': 'Lista de Administradores',

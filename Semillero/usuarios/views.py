@@ -60,5 +60,26 @@ def newUser(request):
         'form_logins': register_form_user_login
     })
 
+def newEstudiante(request):
+    template = 'solicitud-estudiante.html'
+    register_form_estudiante = RegistrarEstudiante()
+    
+    
+
+    # if request.method == 'POST':
+    #     register_form_estudiante = RegistrarEstudiante(request.POST)
+    #     if  register_form_estudiante.is_valid():
+    #         register_form_estudiante.save()
+    #         return redirect('login-usuarios')
+    #     else:
+    #         pass
+            #messages.success(request, 'administrador ya registrado !!')
+
+
+        #return render(request, template)
+    
+    return render(request, template, {
+        'forms': register_form_estudiante
+    })
 
             

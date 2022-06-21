@@ -13,7 +13,6 @@ class Semilleros(models.Model):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
-    user = models.ManyToManyField(User)
-
+    
     class Meta:
         db_table = 'Semilleros'

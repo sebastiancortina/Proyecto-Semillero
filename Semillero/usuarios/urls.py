@@ -8,6 +8,7 @@ urlpatterns = [
 
     path('user/index/admin', views.index, name= "index-admin"),
     path('registrar', views.newUser, name= "registrar-usuarios"),
+    path('registrar/estudiante', views.newEstudiante, name= "registrar-estudiante"),
    # path('registrar', views.newUser, name= "registrar-usuarios"),
 
 
